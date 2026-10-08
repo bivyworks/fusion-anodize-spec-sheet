@@ -1,0 +1,14 @@
+{
+    "autodeskProduct": "Fusion",
+    "type": "addin",
+    "id": "5b0c8e2a-7f3d-4c61-9a1e-2d6f0b3c9e47",
+    "author": "Bivy Works",
+    "description": {
+        "": "Generates a one-page anodize finishing specification PDF for the selected solid body."
+    },
+    "version": "0.5.0",
+    "runOnStartup": true,
+    "supportedOS": "windows|mac",
+    "editEnabled": true,
+    "iconFilename": ""
+}

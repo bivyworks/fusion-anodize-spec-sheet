@@ -1,0 +1,35 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.12", "3.13", "3.14"]
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Lint
+        run: |
+          python -m pip install --quiet pyflakes
+          python -m pyflakes BivyAnodizeSpec/BivyAnodizeSpec.py BivyAnodizeSpec/config.py BivyAnodizeSpec/commands BivyAnodizeSpec/tests
+      - name: Unit tests
+        working-directory: BivyAnodizeSpec
+        run: python -I -m unittest discover -s tests -p "test_*.py"
+      - name: Sample sheets build
+        working-directory: BivyAnodizeSpec
+        run: |
+          python tests/make_sample_sheet.py
+          python tests/make_sample_sheet.py --block
+          python tests/make_sample_sheet.py --bar
+          python tests/make_sample_sheet.py --spike

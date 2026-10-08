@@ -1,0 +1,9 @@
+[
+  {"label": "— Custom —"},
+  {"label": "Type III · Class 2 · Black", "type": "Type III", "class": "Class 2", "color": "BLACK", "thickness_min_in": 0.001,  "thickness_max_in": 0.0015},
+  {"label": "Type III · Class 1 · Clear", "type": "Type III", "class": "Class 1", "color": "CLEAR", "thickness_min_in": null, "thickness_max_in": null},
+  {"label": "Type II · Class 2 · Black",  "type": "Type II",  "class": "Class 2", "color": "BLACK", "thickness_min_in": null, "thickness_max_in": null},
+  {"label": "Type II · Class 1 · Clear",  "type": "Type II",  "class": "Class 1", "color": "CLEAR", "thickness_min_in": null, "thickness_max_in": null},
+  {"label": "Type II · Class 2 · Red",    "type": "Type II",  "class": "Class 2", "color": "RED",   "thickness_min_in": null, "thickness_max_in": null},
+  {"label": "Type II · Class 2 · Blue",   "type": "Type II",  "class": "Class 2", "color": "BLUE",  "thickness_min_in": null, "thickness_max_in": null}
+]
